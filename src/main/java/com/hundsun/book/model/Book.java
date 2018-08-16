@@ -18,6 +18,16 @@ public class Book {
 
     public int comments_count;
 
+    public char status;
+
+    public char getStatus() {
+        return status;
+    }
+
+    public void setStatus(char status) {
+        this.status = status;
+    }
+
     public String getNo() {
         return no;
     }
