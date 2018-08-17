@@ -1,4 +1,4 @@
-package com.hundsun.book.mapper;
+package com.hundsun.book.service;
 
 import com.hundsun.book.model.Book;
 import org.apache.ibatis.annotations.Insert;
@@ -10,11 +10,11 @@ import org.apache.ibatis.annotations.Delete;
 import java.util.List;
 
 /**
- * 图书服务
+ * 图书服务接口
  */
 
 @Mapper
-public interface BookService {
+public interface BookMapper {
 
     @Select("select * from BookInfo where no = #{no}")
     Book getBookById(@Param("no") String no);

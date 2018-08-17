@@ -9,7 +9,7 @@ public class Book {
     public String no;
 
     public String name;
-    
+
     public float score;
 
     public int love_count;

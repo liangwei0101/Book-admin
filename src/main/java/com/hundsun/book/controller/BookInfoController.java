@@ -1,10 +1,10 @@
 package com.hundsun.book.controller;
 
+import com.hundsun.book.service.BookMapper;
 import com.hundsun.book.model.Book;
-import com.hundsun.book.serviceImpl.BookServiceImpl;
-import org.springframework.stereotype.Controller;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -16,13 +16,14 @@ import java.util.List;
 @RestController
 public class BookInfoController {
 
-    BookServiceImpl bookServiceImpl = new BookServiceImpl();
+    @Autowired
+    private BookMapper bookMapper;
     /**
      * 获取图书信息
      */
-    @RequestMapping("/")
-    @ResponseBody
-    public void getBookInfo() {
-        List<Book> aa = bookServiceImpl.getBookList();
+    @RequestMapping(value = "/",method = RequestMethod.GET)
+    public List<Book> getBookInfo() {
+        var aa = bookMapper.getBookList();
+        return aa;
     }
 }

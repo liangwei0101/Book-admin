@@ -1,7 +1,7 @@
 package com.hundsun.book.api;
 
 import com.hundsun.book.model.Book;
-import com.hundsun.book.mapper.BookService;
+import com.hundsun.book.service.BookMapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +11,7 @@ import java.util.List;
 @RequestMapping("/book")
 public class BookController {
 
-    private BookService bookService;
+    private BookMapper bookService;
 
     @RequestMapping(value = "/{no}", method = RequestMethod.GET)
     public Book getBookById(@RequestParam("no") String no){
