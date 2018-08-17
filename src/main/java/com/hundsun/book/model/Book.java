@@ -1,6 +1,8 @@
 package com.hundsun.book.model;
 
 
+import java.io.Serializable;
+
 /**
  * 图书实体的类
  */

@@ -1,19 +1,14 @@
-package com.hundsun.book.service;
+package com.hundsun.book.mapper;
 
 import com.hundsun.book.model.Book;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.*;
 import org.mapstruct.Mapper;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Delete;
 
 import java.util.List;
 
 /**
  * 图书服务接口
  */
-
-@Mapper
 public interface BookMapper {
 
     @Select("select * from BookInfo where no = #{no}")

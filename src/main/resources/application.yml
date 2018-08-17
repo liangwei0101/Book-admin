@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://101.132.124.171:3306/liang?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
