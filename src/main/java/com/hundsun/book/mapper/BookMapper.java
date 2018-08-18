@@ -11,17 +11,17 @@ import java.util.List;
  */
 public interface BookMapper {
 
-    @Select("select * from BookInfo where no = #{no}")
+    @Select("select * from book_info where no = #{no}")
     Book getBookById(@Param("no") String no);
 
-    @Select("select * from BookInfo")
+    @Select("select * from book_info")
     List<Book> getBookList();
 
-    @Insert("insert into BookInfo(no, name, score, love_count, collection_count, comments_count) values(#{no}, #{name}, #{score}, #{love_count}, #{collection_count}, #{comments_count}")
+    @Insert("insert into book_info(no, name, score, love_count, collection_count, comments_count) values(#{no}, #{name}, #{score}, #{love_count}, #{collection_count}, #{comments_count}")
     void addBook(Book book);
 
     void updateBook(String no, Book book);
 
-    @Delete("delect from BookInfo where no=#{no}")
+    @Delete("delect from book_info where no=#{no}")
     void deleteBook(@Param("no") String no);
 }

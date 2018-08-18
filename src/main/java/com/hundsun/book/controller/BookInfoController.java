@@ -19,7 +19,7 @@ import java.util.List;
  */
 
 @RestController
-@RequestMapping(value="/book")
+@RequestMapping("/book")
 @Api(value = "PageController", description = "获取图书API")
 public class BookInfoController {
 
@@ -30,8 +30,9 @@ public class BookInfoController {
      */
 
     @ApiOperation(value="查询图书列表", notes="获取全部的图书列表")
-    @RequestMapping(value = "/",method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET)
     public List<Book> getBookInfo() {
+        List<Book> aa=  bookService.getBookList();
         return bookService.getBookList();
     }
 

@@ -8,27 +8,17 @@ import java.io.Serializable;
  */
 public class Book {
 
-    public String no;
+    private String no;
 
-    public String name;
+    private String name;
 
-    public float score;
+    private String author;
 
-    public int love_count;
+    private char status;
 
-    public int collection_count;
+    private String introduce;
 
-    public int comments_count;
-
-    public char status;
-
-    public char getStatus() {
-        return status;
-    }
-
-    public void setStatus(char status) {
-        this.status = status;
-    }
+    private String url;
 
     public String getNo() {
         return no;
@@ -46,36 +36,36 @@ public class Book {
         this.name = name;
     }
 
-    public float getScore() {
-        return score;
+    public String getAuthor() {
+        return author;
     }
 
-    public void setScore(float score) {
-        this.score = score;
+    public void setAuthor(String author) {
+        this.author = author;
     }
 
-    public int getLove_count() {
-        return love_count;
+    public char getStatus() {
+        return status;
     }
 
-    public void setLove_count(int love_count) {
-        this.love_count = love_count;
+    public void setStatus(char status) {
+        this.status = status;
     }
 
-    public int getCollection_count() {
-        return collection_count;
+    public String getIntroduce() {
+        return introduce;
     }
 
-    public void setCollection_count(int collection_count) {
-        this.collection_count = collection_count;
+    public void setIntroduce(String introduce) {
+        this.introduce = introduce;
     }
 
-    public int getComments_count() {
-        return comments_count;
+    public String getUrl() {
+        return url;
     }
 
-    public void setComments_count(int comments_count) {
-        this.comments_count = comments_count;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
 }
