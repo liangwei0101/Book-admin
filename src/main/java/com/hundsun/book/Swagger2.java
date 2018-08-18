@@ -9,24 +9,22 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 
-
+@Configuration
 public class Swagger2 {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.didispace.web"))
+                .apis(RequestHandlerSelectors.basePackage("com.hundsun.book.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Spring Boot中使用Swagger2构建RESTful APIs")
-                .description("我是标题")
-                .termsOfServiceUrl("http://blog.didispace.com/")
-                .contact("梁伟")
+                .title("图书管理API")
+                .description("Hundsun图书项目后台api接口文档")
                 .version("1.0")
                 .build();
     }

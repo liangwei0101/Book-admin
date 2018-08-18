@@ -4,12 +4,12 @@ package com.hundsun.book.controller;
 import com.hundsun.book.model.Book;
 import com.hundsun.book.mapper.BookMapper;
 import com.hundsun.book.service.BookService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -19,6 +19,8 @@ import java.util.List;
  */
 
 @RestController
+@RequestMapping(value="/book")
+@Api(value = "PageController", description = "获取图书API")
 public class BookInfoController {
 
     @Autowired
@@ -26,19 +28,19 @@ public class BookInfoController {
     /**
      * 获取图书信息
      */
-    @RequestMapping(value = "/book",method = RequestMethod.GET)
+
+    @ApiOperation(value="查询图书列表", notes="获取全部的图书列表")
+    @RequestMapping(value = "/",method = RequestMethod.GET)
     public List<Book> getBookInfo() {
-        var aa = bookService.getBookList();
-        return aa;
+        return bookService.getBookList();
     }
 
-
-//    private BookMapper bookService;
-//
-//    @RequestMapping(value = "/{no}", method = RequestMethod.GET)
-//    public Book getBookById(@RequestParam("no") String no){
-//        return bookService.getBookById(no);
-//    }
+    @ApiOperation(value="查询图书具体信息", notes="根据url的no来获取图书详细信息")
+    @ApiImplicitParam(name = "no", value = "图书编号", required = true, dataType = "String", paramType = "path")
+    @RequestMapping(value = "/{no}", method = RequestMethod.GET)
+    public Book getBookById(@PathVariable String no){
+        return bookService.getBookById(no);
+    }
 //
 //    @RequestMapping(value = "/", method = RequestMethod.GET)
 //    public List<Book> getBookList() {
