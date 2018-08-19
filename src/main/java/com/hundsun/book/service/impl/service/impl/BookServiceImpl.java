@@ -1,8 +1,8 @@
-package com.hundsun.book.service.impl;
+package com.hundsun.book.service.impl.service.impl;
 
-import com.hundsun.book.model.Book;
 import com.hundsun.book.mapper.BookMapper;
-import com.hundsun.book.service.BookService;
+import com.hundsun.book.model.Book;
+import com.hundsun.book.service.impl.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,8 +33,8 @@ public class BookServiceImpl implements BookService {
     }
 
 
-    public void updateBook(String no, Book book) {
-         bookMapper.updateBook(no,book);
+    public Book updateBook(Book book) {
+        return bookMapper.updateBook(book);
     }
 
     public void deleteBook(String no) {

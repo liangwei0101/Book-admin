@@ -17,10 +17,11 @@ public interface BookMapper {
     @Select("select * from book_info")
     List<Book> getBookList();
 
-    @Insert("insert into book_info(no, name, score, love_count, collection_count, comments_count) values(#{no}, #{name}, #{score}, #{love_count}, #{collection_count}, #{comments_count}")
+    @Insert({"insert into book_info(no, name, author, status, introduce, url}) values(#{no}, #{name}, #{author}, #{status}, #{introduce}, #{url}"})
     void addBook(Book book);
 
-    void updateBook(String no, Book book);
+    @Select("select * from book_info")
+    Book updateBook(Book book);
 
     @Delete("delect from book_info where no=#{no}")
     void deleteBook(@Param("no") String no);
