@@ -2,7 +2,7 @@ package com.hundsun.book.controller;
 
 
 import com.hundsun.book.model.Book;
-import com.hundsun.book.service.impl.service.BookService;
+import com.hundsun.book.service.BookService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;

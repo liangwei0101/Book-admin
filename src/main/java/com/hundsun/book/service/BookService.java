@@ -1,4 +1,4 @@
-package com.hundsun.book.service.impl.service;
+package com.hundsun.book.service;
 
 import com.hundsun.book.model.Book;
 

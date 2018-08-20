@@ -1,8 +1,8 @@
-package com.hundsun.book.service.impl.service.impl;
+package com.hundsun.book.service.impl;
 
 import com.hundsun.book.mapper.BookMapper;
 import com.hundsun.book.model.Book;
-import com.hundsun.book.service.impl.service.BookService;
+import com.hundsun.book.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

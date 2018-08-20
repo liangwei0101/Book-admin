@@ -1,13 +1,5 @@
 package com.hundsun.book.controller;
 
-import com.hundsun.book.service.impl.service.WebSocketService;
-import io.swagger.models.Model;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-
 /**
  * websocket
  * 消息推送(个人和广播)
