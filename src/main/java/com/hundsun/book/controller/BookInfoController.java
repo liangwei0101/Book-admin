@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/book")
-@Api(value = "PageController", description = "获取图书API")
+@Api(value = "BookController", description = "获取图书API")
 public class BookInfoController {
 
     @Autowired

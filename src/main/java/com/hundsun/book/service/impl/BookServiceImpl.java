@@ -19,8 +19,7 @@ public class BookServiceImpl implements BookService {
 
     public Book getBookById(String no) {
         //todo 业务逻辑
-        Book bb = bookMapper.getBookById(no);
-        return bb;
+        return bookMapper.getBookById(no);
     }
 
     public List<Book> getBookList() {
