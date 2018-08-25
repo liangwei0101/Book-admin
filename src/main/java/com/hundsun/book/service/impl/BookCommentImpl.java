@@ -14,7 +14,6 @@ public class BookCommentImpl implements BookCommentService {
     @Autowired
     private BookCommentMapper bookCommentMapper;
 
-
     @Override
     public BookComment getBookCommentById(String id) {
         return bookCommentMapper.getBookCommentById(id);

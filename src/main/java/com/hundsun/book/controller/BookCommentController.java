@@ -6,9 +6,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -31,8 +29,6 @@ public class BookCommentController {
     @ApiOperation(value="查询图书评论列表", notes="获取的图书评论全部列表")
     @RequestMapping(method = RequestMethod.GET)
     public List<BookComment> getBookInfo() {
-        List<BookComment> aa  = bookCommentService.getBookCommentList();
-        System.out.println(""+aa);
-        return bookCommentService.getBookCommentList();
+        return  bookCommentService.getBookCommentList();
     }
 }

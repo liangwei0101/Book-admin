@@ -13,7 +13,7 @@ public class BookComment {
 
     private int commentLoveCount;
 
-    private float bookSocre;
+    private float bookScore;
 
     public String getCommentId() {
         return commentId;
@@ -47,12 +47,12 @@ public class BookComment {
         this.commentLoveCount = commentLoveCount;
     }
 
-    public float getBookSocre() {
-        return bookSocre;
+    public float getBookScore() {
+        return bookScore;
     }
 
-    public void setBookSocre(float bookSocre) {
-        this.bookSocre = bookSocre;
+    public void setBookScore(float bookScore) {
+        this.bookScore = bookScore;
     }
 
 }
