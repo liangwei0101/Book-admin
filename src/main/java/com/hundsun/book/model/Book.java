@@ -8,7 +8,9 @@ import java.io.Serializable;
  */
 public class Book {
 
-    private String no;
+    private String id;
+
+    private Integer no;
 
     private String name;
 
@@ -20,11 +22,19 @@ public class Book {
 
     private String url;
 
-    public String getNo() {
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Integer getNo() {
         return no;
     }
 
-    public void setNo(String no) {
+    public void setNo(Integer no) {
         this.no = no;
     }
 
