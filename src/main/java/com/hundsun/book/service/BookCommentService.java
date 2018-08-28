@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface BookCommentService {
 
-    BookComment getBookCommentById(@Param("no") String no);
+    List<BookComment> getBookCommentById(@Param("no") Integer no);
 
     List<BookComment> getBookCommentList();
 

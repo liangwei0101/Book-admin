@@ -1,6 +1,7 @@
 package com.hundsun.book.mapper;
 
 import com.hundsun.book.model.Book;
+import com.hundsun.book.model.BookComment;
 import org.apache.ibatis.annotations.*;
 import org.mapstruct.Mapper;
 
@@ -12,9 +13,17 @@ import java.util.List;
 public interface BookMapper {
 
     @Select("select * from book_info where id = #{id}")
+    @Results({@Result(property="bookCommentList",column="no",javaType=List.class,
+            many=@Many(select="com.hundsun.book.mapper.BookCommentMapper.getBookCommentByNo"))
+    })
     Book getBookById(@Param("id") String id);
 
+
     @Select("select * from book_info")
+    @Results({@Result(property = "no", column = "no"),
+              @Result(property="bookCommentList",column="no",javaType=List.class,
+                      many=@Many(select="com.hundsun.book.mapper.BookCommentMapper.getBookCommentByNo"))
+    })
     List<Book> getBookList();
 
     @Insert({"insert into book_info(id, no, name, author, status, introduce, url}) values(#{id}, #{no}, #{name}, #{author}, #{status}, #{introduce}, #{url}"})

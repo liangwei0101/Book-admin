@@ -2,6 +2,7 @@ package com.hundsun.book.model;
 
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 图书实体的类
@@ -21,6 +22,8 @@ public class Book {
     private String introduce;
 
     private String url;
+
+    private List<BookComment> bookCommentList;
 
     public String getId() {
         return id;
@@ -78,4 +81,11 @@ public class Book {
         this.url = url;
     }
 
+    public List<BookComment> getBookCommentList() {
+        return bookCommentList;
+    }
+
+    public void setBookCommentList(List<BookComment> bookCommentList) {
+        this.bookCommentList = bookCommentList;
+    }
 }

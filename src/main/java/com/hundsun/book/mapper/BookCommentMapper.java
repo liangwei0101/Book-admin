@@ -13,8 +13,8 @@ import java.util.List;
  */
 public interface BookCommentMapper {
 
-    @Select("select * from book_comment where no = #{no}")
-    BookComment getBookCommentById(@Param("no") String no);
+    @Select("select * from book_comment a where a.book_no=#{no}")
+    List<BookComment> getBookCommentByNo(@Param("no") Integer no);
 
     @Select("select * from book_comment")
     List<BookComment> getBookCommentList();
