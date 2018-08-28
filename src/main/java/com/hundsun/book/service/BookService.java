@@ -1,5 +1,6 @@
 package com.hundsun.book.service;
 
+import com.hundsun.book.dto.BookCountDto;
 import com.hundsun.book.model.Book;
 
 import java.util.List;
@@ -19,4 +20,6 @@ public interface BookService {
     Book updateBook(Book book);
 
     void deleteBook(String no);
+
+    public BookCountDto getBookCountList();
 }

@@ -1,13 +1,12 @@
 package com.hundsun.book.model;
 
 
-import java.io.Serializable;
 import java.util.List;
 
 /**
  * 图书实体的类
  */
-public class Book {
+public class Book implements Comparable<Book> {
 
     private String id;
 
@@ -23,7 +22,15 @@ public class Book {
 
     private String url;
 
-    private List<BookComment> bookCommentList;
+    private Integer bookThumbsCount;
+
+    private Integer bookLoveCount;
+
+    private Float bookAverageScore;
+
+    private Integer bookCommentCount;
+
+    private List<BookOperation> bookCommentList;
 
     public String getId() {
         return id;
@@ -81,11 +88,52 @@ public class Book {
         this.url = url;
     }
 
-    public List<BookComment> getBookCommentList() {
+    public Float getBookAverageScore() {
+        return bookAverageScore;
+    }
+
+    public void setBookAverageScore(Float bookAverageScore) {
+        this.bookAverageScore = bookAverageScore;
+    }
+
+    public Integer getBookThumbsCount() {
+        return bookThumbsCount;
+    }
+
+    public void setBookThumbsCount(Integer bookThumbsCount) {
+        this.bookThumbsCount = bookThumbsCount;
+    }
+
+    public Integer getBookLoveCount() {
+        return bookLoveCount;
+    }
+
+    public void setBookLoveCount(Integer bookloveCount) {
+        this.bookLoveCount = bookloveCount;
+    }
+
+    public Integer getBookCommentCount() {
+        return bookCommentCount;
+    }
+
+    public void setBookCommentCount(Integer bookCommentCount) {
+        this.bookCommentCount = bookCommentCount;
+    }
+
+    public List<BookOperation> getBookCommentList() {
         return bookCommentList;
     }
 
-    public void setBookCommentList(List<BookComment> bookCommentList) {
+    public void setBookCommentList(List<BookOperation> bookCommentList) {
         this.bookCommentList = bookCommentList;
+    }
+
+    @Override
+    public int compareTo(Book o) {
+        float i = this.getBookAverageScore() - o.getBookAverageScore();
+        if(i == 0){
+            return (int)(this.getBookAverageScore() - o.getBookAverageScore());
+        }
+        return (int)i;
     }
 }

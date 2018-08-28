@@ -1,6 +1,7 @@
 package com.hundsun.book.controller;
 
 
+import com.hundsun.book.dto.BookCountDto;
 import com.hundsun.book.model.Book;
 import com.hundsun.book.service.BookService;
 import io.swagger.annotations.Api;
@@ -48,7 +49,6 @@ public class BookInfoController {
         return bookService.getBookById(id);
     }
 
-
     @ApiOperation(value="更新图书具体信息", notes="根据url的no来更新图书")
     @ApiImplicitParam(name = "book", value = "图书编号", required = true, dataType = "Book")
     @RequestMapping(method = RequestMethod.PUT)
@@ -63,5 +63,9 @@ public class BookInfoController {
          bookService.deleteBook(no);
     }
 
-
+    @ApiOperation(value="查询图书统计信息", notes="获取图书统计详细信息")
+    @RequestMapping(value ="/count",method = RequestMethod.GET)
+    public BookCountDto getBookAndCommentList(){
+        return bookService.getBookCountList();
+    }
 }
