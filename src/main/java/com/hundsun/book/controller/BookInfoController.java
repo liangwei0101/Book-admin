@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 图书信息控制器
@@ -65,7 +66,7 @@ public class BookInfoController {
 
     @ApiOperation(value="查询图书统计信息", notes="获取图书统计详细信息")
     @RequestMapping(value ="/count",method = RequestMethod.GET)
-    public BookCountDto getBookAndCommentList(){
+    public List<Map> getBookAndCommentList(){
         return bookService.getBookCountList();
     }
 }
