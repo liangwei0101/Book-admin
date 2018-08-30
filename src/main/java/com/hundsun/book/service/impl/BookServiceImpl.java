@@ -19,9 +19,16 @@ public class BookServiceImpl implements BookService {
     @Autowired
     private BookMapper bookMapper;
 
-    public Book getBookById(String no) {
+    public Book getBookById(String id) {
         //todo 业务逻辑
-        return bookMapper.getBookById(no);
+        Book aa1= bookMapper.getBookById(id);
+        return aa1;
+    }
+
+    @Override
+    public Book getBookByNo(Integer no) {
+        List<Book>  aa= bookMapper.getBookByNo(no);
+        return aa.get(0);
     }
 
     public List<Book> getBookList() {

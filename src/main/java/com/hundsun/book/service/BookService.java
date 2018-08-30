@@ -2,6 +2,8 @@ package com.hundsun.book.service;
 
 import com.hundsun.book.dto.BookCountDto;
 import com.hundsun.book.model.Book;
+import com.hundsun.book.model.BookOperation;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -13,6 +15,8 @@ import java.util.Map;
 public interface BookService {
 
     Book getBookById(String no);
+
+    Book getBookByNo(Integer no);
 
     List<Book> getBookList();
 

@@ -43,11 +43,11 @@ public class BookInfoController {
         return bookService.getBookList();
     }
 
-    @ApiOperation(value="查询图书具体信息", notes="根据url的id来获取图书详细信息")
-    @ApiImplicitParam(name = "id", value = "图书编号", required = true, dataType = "String", paramType = "path")
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Book getBookById(@PathVariable String id){
-        return bookService.getBookById(id);
+    @ApiOperation(value="查询图书具体信息", notes="根据url的no来获取图书详细信息")
+    @ApiImplicitParam(name = "no", value = "图书编号", required = true, dataType = "Integer", paramType = "path")
+    @RequestMapping(value = "/{no}", method = RequestMethod.GET)
+    public Book getBookById(@PathVariable Integer no){
+        return bookService.getBookByNo(no);
     }
 
     @ApiOperation(value="更新图书具体信息", notes="根据url的no来更新图书")

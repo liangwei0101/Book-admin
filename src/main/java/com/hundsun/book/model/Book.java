@@ -30,6 +30,8 @@ public class Book implements Comparable<Book> {
 
     private Integer bookCommentCount;
 
+    private Integer bookCost;
+
     private List<BookOperation> bookCommentList;
 
     public String getId() {
@@ -118,6 +120,14 @@ public class Book implements Comparable<Book> {
 
     public void setBookCommentCount(Integer bookCommentCount) {
         this.bookCommentCount = bookCommentCount;
+    }
+
+    public Integer getBookCost() {
+        return bookCost;
+    }
+
+    public void setBookCost(Integer bookCost) {
+        this.bookCost = bookCost;
     }
 
     public List<BookOperation> getBookCommentList() {
