@@ -12,7 +12,7 @@ public interface BookMapper {
 
     @Select("select * from book_info where id = #{id}")
     @Results({@Result(property="bookCommentList",column="no",javaType=List.class,
-            many=@Many(select="com.hundsun.book.mapper.BookOperationMapper.getBookCommentByNo"))
+            many=@Many(select="com.hundsun.book.mapper.BookCommentMapper.getBookCommentByNo"))
     })
     Book getBookById(@Param("id") String id);
 
@@ -20,7 +20,7 @@ public interface BookMapper {
     @Select("select * from book_info where no = #{no}")
     @Results({@Result(property = "no", column = "no"),
               @Result(property="bookCommentList",column="no",javaType=List.class,
-                many=@Many(select="com.hundsun.book.mapper.BookOperationMapper.getBookCommentByNo"))
+                many=@Many(select="com.hundsun.book.mapper.BookCommentMapper.getBookCommentByNo"))
     })
     List<Book> getBookByNo(@Param("no") Integer no);
 
@@ -28,7 +28,7 @@ public interface BookMapper {
     @Select("select * from book_info")
     @Results({@Result(property = "no", column = "no"),
               @Result(property="bookCommentList",column="no",javaType=List.class,
-                      many=@Many(select="com.hundsun.book.mapper.BookOperationMapper.getBookCommentByNo"))
+                      many=@Many(select="com.hundsun.book.mapper.BookCommentMapper.getBookCommentByNo"))
     })
     List<Book> getBookList();
 

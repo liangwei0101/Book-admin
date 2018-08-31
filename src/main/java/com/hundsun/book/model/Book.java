@@ -10,29 +10,25 @@ public class Book implements Comparable<Book> {
 
     private String id;
 
-    private Integer no;
+    private String no;
 
     private String name;
 
     private String author;
 
-    private char status;
+    private String status;
 
     private String introduce;
 
     private String url;
 
-    private Integer bookThumbsCount;
-
     private Integer bookLoveCount;
 
     private Float bookAverageScore;
 
-    private Integer bookCommentCount;
-
     private Integer bookCost;
 
-    private List<BookOperation> bookCommentList;
+    private List<BookComment> bookCommentList;
 
     public String getId() {
         return id;
@@ -42,11 +38,11 @@ public class Book implements Comparable<Book> {
         this.id = id;
     }
 
-    public Integer getNo() {
+    public String getNo() {
         return no;
     }
 
-    public void setNo(Integer no) {
+    public void setNo(String no) {
         this.no = no;
     }
 
@@ -66,11 +62,11 @@ public class Book implements Comparable<Book> {
         this.author = author;
     }
 
-    public char getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(char status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -98,28 +94,12 @@ public class Book implements Comparable<Book> {
         this.bookAverageScore = bookAverageScore;
     }
 
-    public Integer getBookThumbsCount() {
-        return bookThumbsCount;
-    }
-
-    public void setBookThumbsCount(Integer bookThumbsCount) {
-        this.bookThumbsCount = bookThumbsCount;
-    }
-
     public Integer getBookLoveCount() {
         return bookLoveCount;
     }
 
     public void setBookLoveCount(Integer bookloveCount) {
         this.bookLoveCount = bookloveCount;
-    }
-
-    public Integer getBookCommentCount() {
-        return bookCommentCount;
-    }
-
-    public void setBookCommentCount(Integer bookCommentCount) {
-        this.bookCommentCount = bookCommentCount;
     }
 
     public Integer getBookCost() {
@@ -130,11 +110,11 @@ public class Book implements Comparable<Book> {
         this.bookCost = bookCost;
     }
 
-    public List<BookOperation> getBookCommentList() {
+    public List<BookComment> getBookCommentList() {
         return bookCommentList;
     }
 
-    public void setBookCommentList(List<BookOperation> bookCommentList) {
+    public void setBookCommentList(List<BookComment> bookCommentList) {
         this.bookCommentList = bookCommentList;
     }
 

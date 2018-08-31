@@ -1,19 +1,19 @@
 package com.hundsun.book.service;
 
-import com.hundsun.book.model.BookOperation;
+import com.hundsun.book.model.BookComment;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 public interface BookOperationService {
 
-    List<BookOperation> getBookCommentById(@Param("id") Integer id);
+    List<BookComment> getBookCommentById(@Param("id") Integer id);
 
-    List<BookOperation> getBookCommentList();
+    List<BookComment> getBookCommentList();
 
-    void addBookComment(BookOperation bookComment);
+    void addBookComment(BookComment bookComment);
 
-    BookOperation updateBookComment(BookOperation book);
+    BookComment updateBookComment(BookComment book);
 
     void deleteBookComment(@Param("comment_id") String comment_id);
 

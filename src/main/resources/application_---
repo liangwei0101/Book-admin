@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://101.132.124.171:3306/liang?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+  mail:
+    password: znrpzrgmfmrdbhgh
+    port: 465
+    default-encoding: UTF-8
+    host: smtp.qq.com
+    properties:
+      mail:
+        debug: true
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+    username: 272262983@qq.com

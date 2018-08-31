@@ -24,9 +24,12 @@ public class BookInfoController {
 
     @Autowired
     private BookService bookService;
-    /**
-     * 获取图书信息
-     */
+
+    @RequestMapping(value ="/test", method = RequestMethod.GET)
+    public List<Map> getIndexList(){
+        return bookService.getBookIndex();
+    }
+
 
     @ApiOperation(value="创建图书", notes="创建图书")
     @ApiImplicitParam(name = "book", value = "图书详细实体", required = true, dataType = "Book")

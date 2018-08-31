@@ -5,7 +5,7 @@ import java.util.Date;
 /**
  * 图书评论
  */
-public class BookOperation {
+public class BookComment {
 
     private String commentId;
 

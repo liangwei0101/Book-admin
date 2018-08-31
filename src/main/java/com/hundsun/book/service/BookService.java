@@ -1,9 +1,6 @@
 package com.hundsun.book.service;
 
-import com.hundsun.book.dto.BookCountDto;
 import com.hundsun.book.model.Book;
-import com.hundsun.book.model.BookOperation;
-import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 import java.util.Map;
@@ -26,5 +23,7 @@ public interface BookService {
 
     void deleteBook(String no);
 
-    public List<Map> getBookCountList();
+    List<Map> getBookCountList();
+
+    List<Map> getBookIndex();
 }
