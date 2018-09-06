@@ -1,5 +1,6 @@
 package com.hundsun.book.util;
 
+import java.text.ParseException;
 import java.util.Random;
 
 public class util {
@@ -33,5 +34,25 @@ public class util {
         }
 
         return sixString;
+    }
+
+    public static long getDaySub(String beginDateStr,String endDateStr)
+    {
+        long day=0;
+        java.text.SimpleDateFormat format = new java.text.SimpleDateFormat("yyyy-MM-dd");
+        java.util.Date beginDate;
+        java.util.Date endDate;
+        try
+        {
+            beginDate = format.parse(beginDateStr);
+            endDate= format.parse(endDateStr);
+            day=(endDate.getTime()-beginDate.getTime())/(24*60*60*1000);
+            //System.out.println("相隔的天数="+day);
+        } catch (ParseException e)
+        {
+            // TODO 自动生成 catch 块
+            e.printStackTrace();
+        }
+        return day;
     }
 }

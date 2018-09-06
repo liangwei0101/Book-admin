@@ -32,7 +32,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book getBookByNo(Integer no) {
-        List<Book>  aa= bookMapper.getBookByNo(no);
+        List<Book> aa= bookMapper.getBookByNo(no);
         return aa.get(0);
     }
 
