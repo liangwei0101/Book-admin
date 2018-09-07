@@ -41,8 +41,7 @@ public class BookInfoController {
     @ApiOperation(value="查询图书列表", notes="获取全部的图书列表")
     @RequestMapping(method = RequestMethod.GET)
     public List<Book> getBookInfo() {
-        List<Book> aa=  bookService.getBookList();
-        return bookService.getBookList();
+        return  bookService.getBookList();
     }
 
     @ApiOperation(value="查询图书具体信息", notes="根据url的no来获取图书详细信息")

@@ -26,8 +26,7 @@ public class BookServiceImpl implements BookService {
 
     public Book getBookById(String id) {
         //todo 业务逻辑
-        Book aa1= bookMapper.getBookById(id);
-        return aa1;
+        return bookMapper.getBookById(id);
     }
 
     @Override

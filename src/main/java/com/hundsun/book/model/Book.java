@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * 图书实体的类
  */
-public class Book implements Comparable<Book> {
+public class Book {
 
     private String id;
 
@@ -118,12 +118,4 @@ public class Book implements Comparable<Book> {
         this.bookCommentList = bookCommentList;
     }
 
-    @Override
-    public int compareTo(Book o) {
-        float i = this.getBookAverageScore() - o.getBookAverageScore();
-        if(i == 0){
-            return (int)(this.getBookAverageScore() - o.getBookAverageScore());
-        }
-        return (int)i;
-    }
 }
