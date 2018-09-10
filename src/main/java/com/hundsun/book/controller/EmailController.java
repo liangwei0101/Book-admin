@@ -1,6 +1,6 @@
 package com.hundsun.book.controller;
 
-import com.hundsun.book.util.util;
+import com.hundsun.book.util.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 @RestController
@@ -24,7 +22,7 @@ public class EmailController {
 
     @RequestMapping(value = "/{no}", method = RequestMethod.GET)
     void getVerificationCode(@PathVariable String eamilStr) {
-        String randomNumber = util.RandomNumber();
+        String randomNumber = Util.RandomNumber();
         userInfoMap.put(eamilStr,randomNumber);
         SendEamil(randomNumber);
     }

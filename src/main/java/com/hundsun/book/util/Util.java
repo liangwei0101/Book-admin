@@ -2,7 +2,7 @@ package com.hundsun.book.util;
 
 import java.util.Random;
 
-public class util {
+public class Util {
 
     /**
      * 产品随机数
