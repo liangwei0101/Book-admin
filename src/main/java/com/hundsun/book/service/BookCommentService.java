@@ -5,7 +5,7 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface BookOperationService {
+public interface BookCommentService {
 
     List<BookComment> getBookCommentById(@Param("id") Integer id);
 

@@ -25,11 +25,10 @@ public class BookInfoController {
     @Autowired
     private BookService bookService;
 
-    @RequestMapping(value ="/test", method = RequestMethod.GET)
+    @RequestMapping(value ="/home", method = RequestMethod.GET)
     public List<Map> getIndexList(){
         return bookService.getBookIndex();
     }
-
 
     @ApiOperation(value="创建图书", notes="创建图书")
     @ApiImplicitParam(name = "book", value = "图书详细实体", required = true, dataType = "Book")
@@ -42,8 +41,7 @@ public class BookInfoController {
     @ApiOperation(value="查询图书列表", notes="获取全部的图书列表")
     @RequestMapping(method = RequestMethod.GET)
     public List<Book> getBookInfo() {
-        List<Book> aa=  bookService.getBookList();
-        return bookService.getBookList();
+        return  bookService.getBookList();
     }
 
     @ApiOperation(value="查询图书具体信息", notes="根据url的no来获取图书详细信息")

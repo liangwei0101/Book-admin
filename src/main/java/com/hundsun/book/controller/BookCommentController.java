@@ -1,7 +1,7 @@
 package com.hundsun.book.controller;
 
 import com.hundsun.book.model.BookComment;
-import com.hundsun.book.service.BookOperationService;
+import com.hundsun.book.service.BookCommentService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
@@ -13,10 +13,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/bookComment")
 @Api(value = "BookCommentController", description = "获取图书评论API")
-public class BookOperationController {
+public class BookCommentController {
 
     @Autowired
-    private BookOperationService bookCommentService;
+    private BookCommentService bookCommentService;
 
     @ApiOperation(value="增加图书评论", notes="增加图书评论")
     @ApiImplicitParam(name = "bookComment", value = "图书评论详细实体", required = true, dataType = "bookComment")

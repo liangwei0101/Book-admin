@@ -19,7 +19,7 @@ public interface BookCommentMapper {
     @Select("select * from book_comment")
     List<BookComment> getBookCommentList();
 
-    @Insert({"insert into book_comment(comment_id, comment_content, book_no, comment_love_count, book_score) values(#{commentId}, #{commentContent}, #{bookNo}, #{commentLoveCount}, #{bookScore})"})
+    @Insert({"insert into book_comment(user_id, comment_time, comment_id, comment_content, book_no, book_score) values(#{userId}, #{commentTime}, #{commentId}, #{commentContent}, #{bookNo}, #{bookScore})"})
     void addBookComment(BookComment bookComment);
 
     @Select("select * from book_comment")

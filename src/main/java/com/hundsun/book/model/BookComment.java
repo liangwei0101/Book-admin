@@ -13,13 +13,9 @@ public class BookComment {
 
     private String commentContent;
 
-    private int commentLoveCountStatus;
+    private float bookScore;
 
-    private float bookScoreStatus;
-
-    private Integer bookThumbsStatus;
-
-    private String userName;
+    private String userId;
 
     private String commentTime;
 
@@ -47,32 +43,20 @@ public class BookComment {
         this.commentContent = commentContent;
     }
 
-    public Integer getBookThumbsStatus() {
-        return bookThumbsStatus;
+    public float getBookScore() {
+        return bookScore;
     }
 
-    public void setBookThumbsStatus(Integer bookThumbsStatus) {
-        this.bookThumbsStatus = bookThumbsStatus;
+    public void setBookScore(float bookScore) {
+        this.bookScore = bookScore;
     }
 
-    public int getCommentLoveCountStatus() {
-        return commentLoveCountStatus;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setCommentLoveCountStatus(int commentLoveCountStatus) {
-        this.commentLoveCountStatus = commentLoveCountStatus;
-    }
-
-    public float getBookScoreStatus() {
-        return bookScoreStatus;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getCommentTime() {
@@ -81,9 +65,5 @@ public class BookComment {
 
     public void setCommentTime(String commentTime) {
         this.commentTime = commentTime;
-    }
-
-    public void setBookScoreStatus(float bookScoreStatus) {
-        this.bookScoreStatus = bookScoreStatus;
     }
 }
